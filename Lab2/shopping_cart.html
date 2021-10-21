@@ -12,11 +12,32 @@
             <p>АВИАСАЛЕС</p>
         </div>
         <form class="search" action="#">
+            <div class="dropWrap">
+                <div class="browse">
+                    <span>Поиск &#9660;</span>
+                </div>
+                <div class="dropdown">
+                    <li>Что-то</li>
+                    <li>Что-то 2</li>
+                    <li>Что-то 3</li>
+                    <li style="margin-bottom:0">Что?</li>
+                </div>
+            </div>
             <input type="text" placeholder="Search for ticket" name="search">
-            <button type="submit"></button>
+            <button class="searchButton" type="submit"></button>
         </form>
-        <div class="shopIcon"></div>
-        <div class="account"><p>Аккаунт</p></div>
+        <div class="shopIcon"><a href="shopping_cart.html"></a></div>
+        <div class="account dropWrap">
+            <div style="display:flex">
+                <p>Аккаунт &#9660;</p>
+            </div>
+            <div class="dropdown">
+                <li>Профиль</li>
+                <li>Билеты</li>
+                <li>Настройки</li>
+                <li style="margin-bottom:0">Выйти</li>
+            </div>
+        </div>
     </header>
     <main>
         <nav>
@@ -136,7 +157,7 @@
         </div>
     </main>
     <footer>
-        <div class="copyright">&#169 Авиасалес Все права защищены</div>
+        <div class="copyright">&#169; Авиасалес Все права защищены</div>
         <div class="images">
             <img src="images/facebook.png" alt="facebook">
             <img src="images/twitter.png" alt="twitter">
