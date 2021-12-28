@@ -1,0 +1,53 @@
+{
+    "data":[
+        {   "title":"Title 1",
+            "image": "img1.jpg",
+            "shortdesc":"this is the first news post on the site",
+            "fulldesc":"news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example "
+        },
+        {
+            "title":"Title 2",
+            "image": "img2.jpg",
+            "shortdesc":"this is the second news post on the site",
+            "fulldesc":"news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example "
+        },
+        {
+            "title":"Title 3",
+            "image": "img3.jpg",
+            "shortdesc":"this is the third news post on the site"
+        },
+        {
+            "title":"Title 4",
+            "image": "img1.jpg",
+            "shortdesc":"this is the fourth news post on the site",
+            "fulldesc":"news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example "
+        },
+        {
+            "title":"Title 5",
+            "image": "img2.jpg",
+            "shortdesc":"this is the fifth news post on the site"
+        },
+        {
+            "title":"Title 6",
+            "image": "img3.jpg",
+            "shortdesc":"this is the sixth news post on the site",
+            "fulldesc":"news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example "
+        },
+        {
+            "title":"Title 7",
+            "image": "img1.jpg",
+            "shortdesc":"this is the seventh news post on the site"
+        },
+        {
+            "title":"Title 8",
+            "image": "img2.jpg",
+            "shortdesc":"this is the eighth news post on the site",
+            "fulldesc":"news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example news example "
+        },
+        {
+            "title":"Title 9",
+            "image": "img3.jpg",
+            "shortdesc":"this is the nineth news post on the site"
+        }
+    ]
+}
