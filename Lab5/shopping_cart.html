@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+
+    <title>Заказ билета</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="plane">
+            <p>АВИАСАЛЕС</p>
+        </div>
+        <form class="search" action="#">
+            <div class="dropWrap">
+                <div class="browse">
+                    <span>Поиск &#9660;</span>
+                </div>
+                <div class="dropdown">
+                    <li>Что-то</li>
+                    <li>Что-то 2</li>
+                    <li>Что-то 3</li>
+                    <li style="margin-bottom:0">Что?</li>
+                </div>
+            </div>
+            <input type="text" placeholder="Search for ticket" name="search">
+            <button class="searchButton" type="submit"></button>
+        </form>
+        <div class="shopIcon">
+            <a href="shopping_cart.html"></a>
+        </div>
+        <div class="account dropWrap">
+            <div style="display:flex">
+                <p>Аккаунт &#9660;</p>
+            </div>
+
+            <div class="dropdown">
+                <li id="myBtn2">Профиль</li>
+                <li>Билеты</li>
+                <li>Настройки</li>
+                <li style="margin-bottom:0">Выйти</li>
+            </div>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a href="index.html">Главная</a>
+
+                    </div>
+                    <div class="col">
+                        <a href="shopping_cart.html">Заказы</a>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </nav>
+
+        <div id="myModal" class="modal">
+
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Шапка модального окна</h2>
+                </div>
+                <div class="modal-body">
+
+
+                    <p id="message">Пожалуйста, заполните все поля формы!</p>
+                    E-mail: <input id="email" name="email" type="text" size="20" /><br /> Телефон: <input id="phone" name="phone" type="text" size="20" /><br />
+                    <input name="button" type="submit" value="Проверить" onClick="ValidMail(); ValidPhone();" />
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <h3>Футер модального окна</h3>
+                </div>
+            </div>
+
+        </div>
+        <div class="tab row">
+            <button class="tablinks col" onclick="openCity(event, 'London')">Лондон</button>
+            <button class="tablinks col" onclick="openCity(event, 'Paris')">Париж</button>
+            <button class="tablinks col" onclick="openCity(event, 'Tokyo')">Токио</button>
+        </div>
+
+        <div id="London" class="tabcontent">
+            <h3>Лондон</h3>
+            <p>Лондон является столицей Англии.</p>
+            <img class="img-fluid" src="images/22.jpg" alt="">
+        </div>
+
+        <div id="Paris" class="tabcontent">
+            <h3>Париж</h3>
+            <p>Париж является столицей Франции.</p>
+            <img class="img-thumbnail" src="images/23.jpg" alt="">
+
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+            <h3>Токио</h3>
+            <p>Токио является столицей Японии.</p>
+            <img class="img-fluid" src="images/24.jpg" alt="">
+
+        </div>
+        <div class="startPanel">
+            <span class="spMain">Новые билеты</span>
+            <span class="sp">Все / не все / <span class="spSpec" style="color: lightcoral">новые</span></span>
+        </div>
+        <div class="tickets">
+            <div class="colNames">
+                <span class="colText" style="margin-right: 0; margin-left: 0; width: 500px; text-align: left">Детали билета</span>
+                <span class="colText">Цена</span>
+                <span class="colText">Количество</span>
+                <span class="colText">Сумма</span>
+                <span class="colText" style="margin-right: 0">Действие</span>
+            </div>
+            <div class="ticket">
+                <div class="mainBlock">
+                    <img style="width: 100px; height: 115px" src="images/ticket.jpg" alt="ticket">
+                    <div class="details">
+                        <span class="d1">Билет</span>
+                        <span class="d2">Куда: <span class="d3">туда</span></span>
+                        <span class="d2" style="margin-top:10px">Когда: <span class="d3">тогда</span></span>
+                    </div>
+                </div>
+
+                <span class="colText">1000 руб</span>
+                <span class="colText">2</span>
+                <span class="colText">2000 руб</span>
+                <img class="deleteIcon" src="images/delete.png" alt="delete">
+            </div>
+            <div class="lineBreak"></div>
+            <div class="ticket">
+                <div class="mainBlock">
+                    <img style="width: 100px; height: 115px" src="images/ticket.jpg" alt="ticket">
+                    <div class="details">
+                        <span class="d1">Билет</span>
+                        <span class="d2">Куда: <span class="d3">туда</span></span>
+                        <span class="d2" style="margin-top:10px">Когда: <span class="d3">тогда</span></span>
+                    </div>
+                </div>
+                <span class="colText">500 руб</span>
+                <span class="colText">1</span>
+                <span class="colText">500 руб</span>
+                <img class="deleteIcon" src="images/delete.png" alt="delete">
+            </div>
+            <div class="lineBreak"></div>
+            <div class="ticket" style="border-bottom: 1px solid gainsboro;">
+                <div class="mainBlock">
+                    <img style="width: 100px; height: 115px" src="images/ticket.jpg" alt="ticket">
+                    <div class="details">
+                        <span class="d1">Билет</span>
+                        <span class="d2">Куда: <span class="d3">туда</span></span>
+                        <span class="d2" style="margin-top:10px">Когда: <span class="d3">тогда</span></span>
+                    </div>
+                </div>
+                <span class="colText">750 руб</span>
+                <span class="colText">3</span>
+                <span class="colText">2250 руб</span>
+                <img class="deleteIcon" src="images/delete.png" alt="delete">
+            </div>
+        </div>
+        <div class="shopButtons">
+            <div class="shopButton" style="margin-left:230px"><span>Очистить</span></div>
+            <div class="shopButton" style="margin-left:auto; margin-right:230px"><span>Продолжить</span></div>
+            <div class="shopButton" style=" margin-right:300px">
+                <div class="containerr">
+
+                    <div class="">Сортировкать по цене</div>
+                    <input type="range" min="0" step="1" max="10000" value="100">
+                    <input type="range" min="0" step="1" max="10000" value="8000">
+                </div>
+                <div class="conteiner " style=" margin-left:100px">
+                    <div id="val1" class="my-5">8000</div>
+                    <div id="val2" class="my-5">100</div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="checkoutBlock">
+            <div class="subinfo">
+                <span>Стоимость</span>
+                <span style="margin-left:15px">4750 руб</span>
+            </div>
+            <div class="info">
+                <span>Конечная сумма</span>
+                <span style="color:lightcoral; margin-left:15px">4750 руб</span>
+            </div>
+            <div class="line"></div>
+            <div class="checkoutButton"><span>Приобрести</span></div>
+        </div>
+
+        <div class="end">
+            <div class="wrap">
+                <div class="eLogo">
+                    <img src="images/logo.png" alt="plane">
+                    <p>АВИАСАЛЕС</p>
+                </div>
+                <span class="about">Elit aute irure eu Lorem do ut laborum esse. Veniam nisi et labore Lorem nulla do dolor laborum sunt cupidatat dolor anim consectetur voluptate. Culpa adipisicing mollit est irure. Laboris minim aliqua sint cupidatat. Anim elit culpa dolor aliqua.</span>
+                <span class="about">Exercitation excepteur velit ut in ea qui aute do ad duis nostrud qui adipisicing. Excepteur in reprehenderit do sint irure dolor duis non irure culpa. Mollit Lorem incididunt officia eu qui eu est aliquip dolor laboris.</span>
+            </div>
+            <div class="endMenu">
+                <span class="e1">Компания</span>
+                <span class="e2">Главная</span>
+                <span class="e2">Заказы</span>
+                <span class="e2">О нас</span>
+                <span class="e2">Как мы работаем</span>
+                <span class="e2">Контакты</span>
+            </div>
+            <div class="endMenu">
+                <span class="e1">Информация</span>
+                <span class="e2">Условия и положения</span>
+                <span class="e2">Политика приватности</span>
+                <span class="e2">Как заказать</span>
+                <span class="e2">Как вернуть</span>
+                <span class="e2">Реклама</span>
+            </div>
+            <div class="endMenu">
+                <span class="e1">Категория билетов</span>
+                <span class="e2">Эконом</span>
+                <span class="e2">Нормальные</span>
+                <span class="e2">Хорошие</span>
+                <span class="e2">Бизнес-класс</span>
+                <span class="e2">Посмотреть все</span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="copyright">&#169; Авиасалес Все права защищены</div>
+        <div class="images">
+            <img src="images/facebook.png" alt="facebook">
+            <img src="images/twitter.png" alt="twitter">
+            <img src="images/in.png" alt="in">
+            <img src="images/p.png" alt="p">
+            <img src="images/google.png" alt="google">
+        </div>
+    </footer>
+</body>
+<script>
+    const sliders = document.querySelectorAll('input[type="range"]');
+    let val1 = document.getElementById("val1");
+    let val2 = document.getElementById("val2");
+    sliders[0].addEventListener('input', (e) => {
+        if (+sliders[0].value > +sliders[1].value) {
+            sliders[1].value = +sliders[0].value;
+        }
+
+    });
+
+    sliders[1].addEventListener('input', (e) => {
+        if (+sliders[1].value < +sliders[0].value) {
+            sliders[0].value = +sliders[1].value;
+        }
+
+    });
+
+    sliders.forEach((slider) => {
+        slider.addEventListener('change', () => {
+            console.log(`from ${sliders[0].value} to ${sliders[1].value}`);
+            val1.innerHTML = sliders[0].value;
+            val2.innerHTML = sliders[1].value;
+
+        })
+
+    });
+    var modal = document.getElementById('myModal');
+
+    var btn = document.getElementById("myBtn2");
+    btn.addEventListener("click", () => {
+        modal.style.display = "block";
+        console.log('s');
+    })
+    var span = document.getElementsByClassName("close")[0];
+
+    span.addEventListener("click", () => {
+        modal.style.display = "none";
+
+
+    })
+
+    function ValidMail() {
+        var re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+        var myMail = document.getElementById('email').value;
+        var valid = re.test(myMail);
+        if (valid) output = 'Адрес эл. почты введен правильно!';
+        else output = 'Адрес электронной почты введен неправильно!';
+        document.getElementById('message').innerHTML = output;
+        return valid;
+    }
+
+    function ValidPhone() {
+        var re = /^\d[\d\(\)\ -]{4,14}\d$/;
+        var myPhone = document.getElementById('phone').value;
+        var valid = re.test(myPhone);
+        if (valid) output = 'Номер телефона введен правильно!';
+        else output = 'Номер телефона введен неправильно!';
+        document.getElementById('message').innerHTML = document.getElementById('message').innerHTML + '<br />' + output;
+        return valid;
+    }
+
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</html>
