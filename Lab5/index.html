@@ -18,102 +18,128 @@
     <div class="container-fluid">
 
         <header>
-            <div class="logo">
-                <img src="images/logo.png" alt="plane">
-                <p>АВИАСАЛЕС</p>
-            </div>
-            <form class="search" action="#">
-                <div class="dropWrap">
-                    <div class="browse">
-                        <span>Поиск &#9660;</span>
-                    </div>
-                    <div class="dropdown">
-                        <li>Что-то</li>
-                        <li>Что-то 2</li>
-                        <li>Что-то 3</li>
-                        <li style="margin-bottom:0">Что?</li>
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
 
+                        <div class="logo">
+                            <img src="images/logo.png" alt="plane">
+                            <p>АВИАСАЛЕС</p>
+                        </div>
 
                     </div>
+                    <div class="col-4">
+                        <nav>
+                            <div id="nav-toggle" onclick="toggle()">Menü</div>
+                            <ul id="nav-ul">
+                                <li class="dropdown_">
+                                    <a href="#">Билеты</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Sub Menu1</a>
+                                            <ul class="sub-sub">
+                                                <li><a href="#">Sub Sub 1</a></li>
+                                                <li><a href="#">Sub Sub 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Sub Menu2</a></li>
+                                        <li><a href="#">Sub Menu3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown_">
+                                    <a href="#">Контакты</a>
+                                    <ul>
+                                        <li><a href="#">Sub Menu1</a></li>
+                                        <li><a href="#">Sub Menu2</a></li>
+                                        <li><a href="#">Sub Menu3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div id="nav-toggle-alt" onclick="toggle()">X</div>
+                        </nav>
+                    </div>
+                    <div class="col">
+
+
+                        <form class="search" action="#">
+                            <div class="dropWrap">
+                                <div class="browse">
+                                    <span>Поиск &#9660;</span>
+                                </div>
+                                <div class="dropdown">
+                                    <li>Что-то</li>
+                                    <li>Что-то 2</li>
+                                    <li>Что-то 3</li>
+                                    <li style="margin-bottom:0">Что?</li>
+
+
+                                </div>
+                            </div>
+                            <input type="text" placeholder="Search for ticket" name="search">
+                            <button class="searchButton" type="submit"></button>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <div class="shopIcon">
+                            <a href="shopping_cart.html"></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="account dropWrap">
+                            <div style="display:flex; width: 300px;">
+                                <p>Вопросы </p>
+                            </div>
+
+                            <div class="dropdown">
+                                <div id="accordion">
+                                    <h5 class="">JavaScript</h5>
+                                    <div class="tabs__text" id="tabs-1" style="height: 0px;">
+                                        <p>
+                                            JavaScript
+                                        </p>
+                                    </div>
+                                    <h5 class="">JQuery</h5>
+                                    <div class="tabs__text" id="tabs-2" style="height: 0px;">
+                                        <p>
+                                            jQuery
+                                        </p>
+                                    </div>
+                                    <h5 class="">DOM</h5>
+                                    <div class="tabs__text" id="tabs-3" style="height: 0px;">
+                                        <p>
+                                            DOM
+                                        </p>
+                                    </div>
+                                    <h5>CSS</h5>
+                                    <div class="tabs__text" id="tabs-4" style="height: 0px;">
+                                        <p>
+                                            CSS
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <input type="text" placeholder="Search for ticket" name="search">
-                <button class="searchButton" type="submit"></button>
-            </form>
-            <div class="shopIcon">
-                <a href="shopping_cart.html"></a>
             </div>
-            <div class="account dropWrap">
-                <div style="display:flex; width: 300px;">
-                    <p>Вопросы </p>
-                </div>
 
-                <div class="dropdown">
-                    <button class="accordion">Вопрос 1</button>
-                    <div class="panel">
-                        <p>Ответ на Вопрос 1...</p>
-                    </div>
 
-                    <button class="accordion">Вопрос 2</button>
-                    <div class="panel">
-                        <p>Ответ на Вопрос 2...</p>
-                    </div>
 
-                    <button class="accordion">Вопрос  3</button>
-                    <div class="panel">
-                        <p>Ответ на Вопрос 3 ...</p>
-                    </div>
-                </div>
-            </div>
         </header>
         <main>
             <nav>
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <a href="index.html">Главная</a>
+                            <a href="index.html" style='color:black;'>Главная</a>
 
                         </div>
                         <div class="col">
-                            <a href="shopping_cart.html">Заказы</a>
+                            <a href="shopping_cart.html" style='color:black;'>Заказы</a>
 
                         </div>
-                        <div class="col">
-                            <div class="dropdown2">
-                                <a onclick="myFunction()" class="dropbtn2">Dropdown</a>
-                                <div id="myDropdown2" class="dropdown-content2">
-                                    <div class="row w-100">
-                                        <div class="col-12 sub-menu">Что-то1</div>
-                                        <div class="col-12 sub-menu">Что-то1
-                                            <div class="col-12 sub2-menu">Что-то2
-                                                <div class="col-12 sub3-menu">Что-то3</div>
-                                                <div class="col-12 sub3-menu">Что-то3</div>
 
-                                            </div>
-                                            <div class="col-12 sub2-menu">Что-то2
-                                                <div class="col-12 sub3-menu">Что-то3</div>
-
-                                            </div>
-                                            <div class="col-12 sub2-menu">Что-то2</div>
-                                        </div>
-                                        <div class="col-12 sub-menu">Что-то1
-                                            <div class="col-12 sub2-menu">Что-то2
-                                                <div class="col-12 sub3-menu">Что-то3</div>
-                                                <div class="col-12 sub3-menu">Что-то3</div>
-                                                <div class="col-12 sub3-menu">Что-то3</div>
-                                            </div>
-                                            <div class="col-12 sub2-menu">Что-то2</div>
-                                            <div class="col-12 sub2-menu">Что-то2
-                                                <div class="col-12 sub3-menu">Что-то3</div>
-                                                <div class="col-12 sub3-menu">Что-то3</div>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
                     </div>
 
 
@@ -309,43 +335,46 @@
 
 <script>
     var modal = document.getElementById('myModal');
-
-
     var btn = document.getElementById("myBtn");
-
-
     var span = document.getElementsByClassName("close")[0];
-
-
     btn.addEventListener("click", () => {
         modal.style.display = "block";
 
     })
     span.addEventListener("click", () => {
         modal.style.display = "none";
-
-
     })
     btn.addEventListener("click", (e) => {
         if (e.target == modal) {
             modal.style.display = "none";
         }
-
     })
 
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
+    var accordion = document.getElementById('accordion');
+    accordion.addEventListener('click', change);
+    function change(event) {
+        var targ = event.target;
+        if (targ.tagName !== 'H5') return;
+        if (targ.classList.contains('select')) {
+            hideAll();
+        } else {
+            hideAll();
+            targ.classList.add('select');
+            showText(targ.nextElementSibling);
+        }
+    }
+    function hideAll() {
+        var h3El = accordion.querySelectorAll('H5');
+        var divEl = accordion.querySelectorAll('div');
+        for (var i = 0; i < h3El.length; i++) {
+            h3El[i].classList.remove('select');
+        }
+        for (var i = 0; i < divEl.length; i++) {
+            divEl[i].style.height = '0';
+        }
+    }
+    function showText(textEl) {
+        textEl.style.height = textEl.scrollHeight + 'px';
     }
 
     function myFunction() {
@@ -363,6 +392,16 @@
                     openDropdown.classList.remove('show2');
                 }
             }
+        }
+    }
+
+    function toggle() {
+        if (document.getElementById("nav-ul").style.display == "block") {
+            document.getElementById("nav-ul").style.display = "";
+            document.getElementById("nav-toggle-alt").style.display = "none";
+        } else {
+            document.getElementById("nav-ul").style.display = "block";
+            document.getElementById("nav-toggle-alt").style.display = "block";
         }
     }
 </script>

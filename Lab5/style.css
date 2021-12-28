@@ -206,7 +206,7 @@ header {
 }
 
 .account:hover p {
-    color: salmon;
+    color: yellow;
 }
 
 nav {
@@ -1210,4 +1210,176 @@ body {
 .sub-menu:focus .sub2-menu {
     display: block;
     transition-duration: .2s;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+nav>ul>li>a {
+    padding: 20px;
+}
+
+nav>ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #0080C0;
+    display: block;
+    background-color: #0080C0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+}
+
+nav ul li:hover {
+    background-color: #0072A8;
+}
+
+
+/* sub menu */
+
+nav>ul>li.dropdown_>ul {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    height: 1px;
+    overflow: hidden;
+    margin-top: -10px;
+    background-color: #0080C0;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+nav ul li.dropdown_>ul>li {
+    display: block;
+}
+
+nav ul li.dropdown_>ul>li {
+    padding: 0 !important;
+    position: relative !important;
+}
+
+nav ul li.dropdown_>ul>li>a {
+    padding: 10px;
+}
+
+nav ul li.dropdown_:hover>ul {
+    z-index: 999;
+    opacity: 1;
+    display: block;
+    /*overflow:auto;*/
+    overflow: initial;
+    margin-top: 0;
+    height: auto !important;
+    background-color: #0080C0;
+}
+
+#nav-toggle,
+#nav-toggle-alt {
+    width: 100%;
+    background: #0072A8;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+
+
+/* sub sub menu */
+
+ul.sub-sub {
+    position: absolute;
+    z-index: -1;
+    top: -10px;
+    left: 0px;
+    padding: 10px;
+    list-style: none;
+    width: 140px;
+    margin: 0;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+nav ul li.dropdown_>ul>li>ul>li {
+    display: block;
+    background-color: #0080C0;
+}
+
+nav ul li.dropdown_>ul>li>ul>li:hover {
+    background-color: #0072A8;
+}
+
+nav ul li.dropdown_>ul>li>ul>li>a {
+    padding: 10px !important;
+}
+
+nav ul li.dropdown_>ul>li:hover>ul {
+    opacity: 1;
+    left: 84px;
+}
+
+
+/********* sub sub menu bitti ************/
+
+#nav-toggle-alt {
+    display: none;
+}
+
+#accordion {
+    width: 100%;
+    margin: 20px auto;
+}
+
+#accordion>h3 {
+    color: blue;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: .5em .5em .5em .7em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    border: 1px solid #c5c5c5;
+    background: #f6f6f6;
+    font-weight: normal;
+    color: #454545;
+}
+
+#accordion>h3.select {
+    border: 1px solid #003eff;
+    background: #007fff;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+#accordion>div {
+    height: 0;
+    overflow: hidden;
+    color: #333;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: height 1s;
+}
+
+.tabs__text {
+    font: 12px Arial;
+    text-align: justify;
 }
